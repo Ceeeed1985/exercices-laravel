@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\FicheController;
 
 
 
@@ -54,3 +55,11 @@ Route::prefix('post')->name('post.')->group(function(){
     Route::get('/data', [DataController::class, 'showData'])->name('data');
 
 });
+
+Route::get('/fiches', [FicheController::class, 'getFiches'])->name('fiches');
+
+// Route::prefix('ficheID')->name('ficheID.')->group(function(){
+
+//     Route::get('/fiches', [FicheController::class, 'getFiches'])->name('fiches');
+
+// });
